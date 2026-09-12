@@ -1,4 +1,5 @@
-import { Smile, Phone, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const serviceLinks = [
   "Capacitaciones",
@@ -43,13 +44,15 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           {/* Marca */}
           <div>
-            <a href="#inicio" className="flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
-                <Smile className="h-5 w-5" />
-              </span>
-              <span className="text-lg font-bold">
-                Genial Smile Care<span className="text-accent">.com</span>
-              </span>
+            <a href="#inicio" className="flex items-center gap-2.5">
+              <Image
+                src="/images/logo-genial-smile-care.png"
+                alt="Logo de Genial Smile Care"
+                width={400}
+                height={460}
+                className="h-11 w-auto logo-accent"
+              />
+              <span className="text-lg font-bold">Genial Smile Care</span>
             </a>
             <p className="mt-4 max-w-sm text-sm text-white/70">
               Cuidado y educación en salud bucal para toda la familia:
@@ -109,8 +112,8 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Genial Smile Care.com · Todos los
-            derechos reservados.
+            © {new Date().getFullYear()} Genial Smile Care · Todos los derechos
+            reservados.
           </p>
           <p>Salud bucal para toda la vida.</p>
         </div>

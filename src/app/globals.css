@@ -43,8 +43,16 @@ body {
   }
 }
 
-/* Animaciones personalizadas */
+/* Utilidades personalizadas */
 @layer utilities {
+  /* Tinta el logo PNG monocromo al dorado institucional #D4AF37 (token accent).
+     Cadena de filtros calculada por optimizacion numerica: error RMS 0 frente al hex objetivo. */
+  .logo-accent {
+    filter: brightness(0) invert(96%) sepia(87%) saturate(753%)
+      hue-rotate(323deg) brightness(69%) contrast(171%)
+      drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+  }
+
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }

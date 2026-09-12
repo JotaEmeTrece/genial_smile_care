@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Smile, Menu, X, Phone } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -17,12 +18,17 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 shadow-sm backdrop-blur-sm">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white">
-            <Smile className="h-5 w-5" />
-          </span>
+        <a href="#inicio" className="flex items-center gap-2.5">
+          <Image
+            src="/images/logo-genial-smile-care.png"
+            alt="Logo de Genial Smile Care"
+            width={400}
+            height={460}
+            priority
+            className="h-10 w-auto logo-accent"
+          />
           <span className="text-lg font-bold text-darkText">
-            Genial Smile Care<span className="text-accent">.com</span>
+            Genial Smile Care
           </span>
         </a>
 
